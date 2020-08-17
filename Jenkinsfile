@@ -11,5 +11,8 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
+	stage('Run') {
+		./mvnw spring-boot:run
+	}
     }
 }
